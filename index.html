@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMK Service | Профессиональный Автосервис</title>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-wrapper">
+            <a href="#" class="logo"><img src="logo.jpg" alt="RMK Service"></a>
+            <nav class="nav-links">
+                <a href="#services">Услуги</a>
+                <a href="#advantages">Преимущества</a>
+                <a href="#pricing">Цены</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+            <button class="btn-primary" onclick="openModal()">Записаться</button>
+            <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <!-- Мобильное меню -->
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#services" onclick="toggleMobileMenu()">Услуги</a>
+            <a href="#advantages" onclick="toggleMobileMenu()">Преимущества</a>
+            <a href="#pricing" onclick="toggleMobileMenu()">Цены</a>
+            <a href="#contact" onclick="toggleMobileMenu()">Контакты</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1 class="hero-brand">RMK <span>Service</span></h1>
+                <h2 class="hero-subtitle">Надежный ремонт вашего автомобиля</h2>
+                <p>Профессиональный подход. Мы чиним то, за что другие даже не берутся. Гарантия на работы, честные цены и современное оборудование.</p>
+                <div class="hero-actions">
+                    <button class="btn-primary btn-large" onclick="openModal()">Записаться на диагностику</button>
+                    <a href="#services" class="btn-outline btn-large">Наши услуги</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Наши <span>Услуги</span></h2>
+                <div class="grid-cards">
+                    <div class="card">
+                        <i class="fa-solid fa-car-burst"></i>
+                        <h3>Компьютерная диагностика</h3>
+                        <p>Полное сканирование всех систем автомобиля, чтение и сброс ошибок.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-gears"></i>
+                        <h3>Ремонт двигателя</h3>
+                        <p>От замены масла и ремней ГРМ до капитального ремонта ДВС.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-car-on"></i>
+                        <h3>Ремонт ходовой части</h3>
+                        <p>Замена амортизаторов, рычагов, сайлентблоков, сход-развал.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-oil-can"></i>
+                        <h3>Техническое обслуживание</h3>
+                        <p>Замена масла, фильтров, колодок и технических жидкостей.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advantages -->
+        <section id="advantages" class="advantages">
+            <div class="container">
+                <h2 class="section-title">Почему <span>RMK Service</span>?</h2>
+                <div class="features-wrapper">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="feature-text">
+                            <h4>Гарантия на ремонт</h4>
+                            <p>Мы даем официальную гарантию на все выполненные работы и установленные запчасти.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-stopwatch"></i></div>
+                        <div class="feature-text">
+                            <h4>Соблюдение сроков</h4>
+                            <p>Ценим ваше время. Отдаем готовый автомобиль точно в согласованное время.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-toolbox"></i></div>
+                        <div class="feature-text">
+                            <h4>Современное оборудование</h4>
+                            <p>Используем только профессиональный инструмент и дилерские сканеры.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <h2 class="section-title">Ориентировочные <span>Цены</span></h2>
+                <div class="pricing-table-wrapper">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>Услуга</th>
+                                <th>Стоимость</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Компьютерная диагностика авто</td>
+                                <td>от 1 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Замена масла в ДВС (с фильтром)</td>
+                                <td>от 800 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Замена тормозных колодок (ось)</td>
+                                <td>от 1 200 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Диагностика ходовой части</td>
+                                <td>от 500 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Замена ремня ГРМ</td>
+                                <td>от 4 500 ₽</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="pricing-note">* Точная стоимость зависит от марки и модели автомобиля. Оставьте заявку для расчета.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section id="contact" class="contact-cta">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Нужен срочный ремонт?</h2>
+                    <p>Оставьте заявку, и наш мастер свяжется с вами через 5 минут для консультации.</p>
+                    <div class="contact-details">
+                        <p><i class="fa-solid fa-user-tie"></i> Директор: Роман</p>
+                        <p><i class="fa-solid fa-phone"></i> +7 (999) 000-00-00</p>
+                        <p><i class="fa-solid fa-location-dot"></i> г. Москва, ул. Примерная, д. 1</p>
+                    </div>
+                    <button class="btn-primary btn-large" onclick="openModal()">Оставить заявку</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="logo"><img src="logo.jpg" alt="RMK Service"></div>
+            <p>&copy; 2026 RMK Service. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно записи -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></span>
+            <h3>Запись на сервис</h3>
+            <p>Оставьте ваши контакты, и мы перезвоним для уточнения деталей.</p>
+            <form id="bookingForm" onsubmit="submitForm(event)">
+                <input type="text" id="name" placeholder="Ваше имя" required>
+                <input type="tel" id="phone" placeholder="Ваш телефон" required>
+                <input type="text" id="car" placeholder="Марка и модель авто">
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 10px;">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
